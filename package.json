@@ -1,0 +1,25 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ssj24/Forkify.git"
+  },
+  "author": "Sujee Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssj24/Forkify/issues"
+  },
+  "homepage": "https://github.com/ssj24/Forkify#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.1",
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.32.8"
+  }
+}
