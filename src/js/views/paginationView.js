@@ -42,7 +42,7 @@ class PaginationView extends View{
     const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
     // Page 1 && there are other pages
     if (curPage === 1 && numPages > 1) {
-      const markup = this._nextBtnMarkup() + pageMessage;
+      const markup = this._nextBtnMarkup();
       return markup;
     }
     // Last page
