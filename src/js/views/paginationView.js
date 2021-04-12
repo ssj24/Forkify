@@ -1,5 +1,4 @@
 import View from './View.js';
-import { state } from '../model.js';
 import icons from 'url:../../img/icons.svg';
 
 class PaginationView extends View{
