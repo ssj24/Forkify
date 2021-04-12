@@ -39,23 +39,28 @@ class PaginationView extends View{
     // this._data == whole search results
     const curPage = this._data.page;
     const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+    const totalPagesMarkup = `
+      <span class="total-pages">
+        <span class="total-pages--cur">${curPage}</span><span>/${numPages}</span>
+      </span>
+    `;
     // Page 1 && there are other pages
     if (curPage === 1 && numPages > 1) {
-      const markup = this._nextBtnMarkup();
+      const markup = totalPagesMarkup + this._nextBtnMarkup();
       return markup;
     }
     // Last page
     if (curPage === numPages && numPages > 1) {
-      const markup = this._prevBtnMarkup();
+      const markup = this._prevBtnMarkup() + totalPagesMarkup;
       return markup;
     }
     // Other page
     if (curPage < numPages) {
-      const markup = this._prevBtnMarkup() + this._nextBtnMarkup();
+      const markup = this._prevBtnMarkup() + totalPagesMarkup + this._nextBtnMarkup();
       return markup;
     }
     // Page 1 && there are NO other page
-    return '';
+    return totalPagesMarkup;
   }
 }
 export default new PaginationView();
